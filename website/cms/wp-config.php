@@ -23,7 +23,9 @@
 if (strpos($_SERVER['HTTP_HOST'], 'kinderwald.local') !== false) {
     define('WP_HOME', 'http://kinderwald.local'); //local, e.g. 'http://PROJECT_NAME.local:8888'
     define('WP_SITEURL', WP_HOME . '/cms'); //subdir example: '/cms'
+
     //define('WP_ALTERNATE_UPLOAD_URL', 'https://ortnerelectric.com/wp-content/uploads'); //local, e.g. 'http://PROJECT_NAME.dev.engarde-agency.com/cms/wp-content/uploads'
+
     define('WP_DEBUG', true);
 
     // ** MySQL settings - You can get this info from your web host ** //
@@ -36,10 +38,12 @@ if (strpos($_SERVER['HTTP_HOST'], 'kinderwald.local') !== false) {
 }
 else {
     define('FORCE_SSL_ADMIN', true);
-    //define('WP_DEBUG', true);
-    define('WP_DEBUG', false);
 
-    //define ('FS_METHOD', 'direct');
+    define('WP_HOME', 'https://www.derkinderwald.at'); //local, e.g. 'http://PROJECT_NAME.local:8888'
+    define('WP_SITEURL', WP_HOME . '/cms'); //subdir example: '/cms'
+
+    define('WP_DEBUG', true);
+    //define('WP_DEBUG', false);
 
     // ** MySQL settings - You can get this info from your web host ** //
     define('DB_NAME', 'd0294ce4');

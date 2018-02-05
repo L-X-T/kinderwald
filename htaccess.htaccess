@@ -1,0 +1,161 @@
+### EN apache htaccess 3.0 ###
+
+
+
+
+
+
+
+
+
+### EN GARDE SECURITY 1st! ###
+# Deny access to following files
+<Filesmatch "/.htaccess">
+	order allow,deny
+	deny from all
+</Filesmatch>
+<Filesmatch "wp-config">
+	order allow,deny
+	deny from all
+</Filesmatch>
+<Files license.txt>
+	order allow,deny
+	deny from all
+</files>
+<Files liesmich.html>
+	order allow,deny
+	deny from all
+</Files>
+<Files readme.html>
+	order allow,deny
+	deny from all
+</Files>
+
+# Block the include-only files.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^wp-admin/includes/ - [F,L]
+RewriteRule !^wp-includes/ - [S=2]
+# DONT USE IN MULTISITE START - remember to increase the above "S=" flag if you uncomment the line below!
+#RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+# DONT USE IN MULTISITE END
+RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+RewriteRule ^wp-includes/theme-compat/ - [F,L]
+</IfModule>
+
+# BEGIN All In One WP Security
+ServerSignature Off
+#AIOWPS_DISABLE_INDEX_VIEWS_START
+Options -Indexes
+#AIOWPS_DISABLE_INDEX_VIEWS_END
+#AIOWPS_DISABLE_TRACE_TRACK_START
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+RewriteRule .* - [F]
+#AIOWPS_DISABLE_TRACE_TRACK_END
+#AIOWPS_FORBID_PROXY_COMMENTS_START
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteCond %{HTTP:VIA}%{HTTP:FORWARDED}%{HTTP:USERAGENT_VIA}%{HTTP:X_FORWARDED_FOR}%{HTTP:PROXY_CONNECTION} !^$ [OR]
+RewriteCond %{HTTP:XPROXY_CONNECTION}%{HTTP:HTTP_PC_REMOTE_ADDR}%{HTTP:HTTP_CLIENT_IP} !^$
+RewriteCond %{REQUEST_URI} !^/(wp-login.php|wp-admin/|wp-content/plugins/|wp-includes/).* [NC]
+RewriteRule .* - [F,NS,L]
+#AIOWPS_FORBID_PROXY_COMMENTS_END
+# END All In One WP Security
+# END EN GARDE SECURITY
+
+
+
+### EN GARDE Optimization
+# Disable IE8 compatibility mode
+<IfModule mod_headers.c>
+Header set X-UA-Compatible "IE=edge"
+</IfModule>
+
+# PHP Settings
+<IfModule mod_php5.c>
+php_value max_input_vars 5000
+php_value max_execution_time 120
+php_value session.gc_maxlifetime 720
+php_value memory_limit 256M
+php_value upload_max_filesize 100M
+#php_flag magic_quotes_gpc On
+</IfModule>
+
+# PHP Settings
+<IfModule mod_php7.c>
+php_value max_input_vars 5000
+php_value max_execution_time 120
+php_value session.gc_maxlifetime 720
+php_value memory_limit 256M
+php_value upload_max_filesize 100M
+#php_flag magic_quotes_gpc On
+</IfModule>
+
+# Add MIME types
+#AddType application/postscript .ai .eps .ps 
+AddType application/vnd.ms-fontobject .eot
+AddType application/x-font-woff .woff
+AddType application/zip .zip
+AddType font/opentype .otf
+AddType font/truetype .ttf
+AddType image/svg+xml .svg
+AddType image/tiff .tiff .tif
+AddType image/x-eps .eps
+AddType image/x-icon .ico
+AddType video/ogg .ogv
+AddType video/mp4 .mp4
+AddType video/webm .webm
+
+# Add local browser caching
+<IfModule mod_expires.c>
+ExpiresActive On
+# Expires after 1 month A2592000
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/pjpeg "access plus 1 month"
+ExpiresByType application/pdf "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType text/javascript "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType application/x-javascript "access plus 1 month"
+ExpiresDefault "access plus 1 month"
+# Expires after 1 week A604800
+# Expires after 2 days A172800
+# Expires after 1 day A86400
+ExpiresByType text/html "access plus 1 day"
+ExpiresByType text/plain "access plus 1 day"
+</IfModule>
+
+<IfModule mod_headers.c>
+<FilesMatch "\.(gif|ico|jpg|jpeg|pdf|png)$">
+FileETag -INode MTime Size
+Header unset Last-Modified
+Header set Cache-Control "max-age=2592000"
+</FilesMatch>
+<FilesMatch "\.(css|htm|html|txt|js)$">
+FileETag None
+Header set Cache-Control "max-age=2592000"
+</FilesMatch>
+</IfModule>
+# END EN GARDE Optimization
+
+
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# DONT rewrite images
+RewriteRule ^.*\.(gif|ico|jpe?g|png)$ - [L]
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
