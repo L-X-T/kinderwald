@@ -390,7 +390,7 @@ input,
 select,
 textarea {
 	color: #333;
-	font-family: 'Alef', sans-serif;
+	font-family: "Alef", "Helvetica Neue", helvetica, arial, sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -398,7 +398,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-family: 'Annie Use Your Telescope', cursive;
+	font-family: "Annie Use Your Telescope", cursive;
 	font-weight: 800;
 	letter-spacing: 0.1em;
 	line-height: 1.25;
@@ -875,7 +875,7 @@ body {
 }
 
 .site-header {
-	background-color: #333;
+	background-color: #0F5110;
 }
 
 /* Header top */
@@ -999,12 +999,12 @@ body:not(.no-header-image) .custom-header-image::before,
 }
 
 .main-navigation ul {
-	background: #111;
+	background: inherit;
 	display: none;
 	list-style: none;
 	margin: 0;
 	padding: 0 1.5em;
-	text-align: left;
+	text-align: center;
 }
 
 .main-navigation ul.nav-menu {
@@ -1971,17 +1971,27 @@ h2.widget-title {
 	text-decoration: none;
 }
 
-.site-info .wrap .sep {
+/* .site-info .wrap .sep {
 	margin: 0;
 	display: block;
 	visibility: hidden;
 	height: 0;
 	width: 100%;
+} */
+
+.site-info ul#footer-menu {
+	margin: 0 0 0 0;
 }
 
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
+.site-info #footer-menu li {
+	display: inline;
+	padding: 1em;
+	list-style-type: none;
+}
+
+	/*--------------------------------------------------------------
+    # Infinite scroll
+    --------------------------------------------------------------*/
 #infinite-handle {
 	clear: both;
 	padding: 0 0 4em;

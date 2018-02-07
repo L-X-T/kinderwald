@@ -123,8 +123,6 @@ function lodestar_the_custom_logo() {
 /**
  * Register custom fonts
  */
-
-
 function lodestar_fonts_url() {
 	$fonts_url = '';
 
@@ -161,7 +159,6 @@ function lodestar_fonts_url() {
 
 	return esc_url_raw( $fonts_url );
 }
-
 
 /**
  * Register widget area.
