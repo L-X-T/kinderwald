@@ -1,6 +1,7 @@
 <div class="site-branding">
 	<div class="wrap">
 
+	
 		<?php lodestar_the_custom_logo(); ?>
 
 		<?php if ( is_front_page() && is_home() ) : ?>

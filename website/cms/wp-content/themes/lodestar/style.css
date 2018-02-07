@@ -390,7 +390,7 @@ input,
 select,
 textarea {
 	color: #333;
-	font-family: "Karla", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: 'Alef', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -398,7 +398,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-family: "Work Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: 'Annie Use Your Telescope', cursive;
 	font-weight: 800;
 	letter-spacing: 0.1em;
 	line-height: 1.25;
@@ -880,7 +880,7 @@ body {
 
 /* Header top */
 .header-top {
-	background-color: #29292a;
+	background-color: #0F5110;
 	color: #fff;
 	letter-spacing: 0.05em;
 	text-align: center;
@@ -1953,7 +1953,7 @@ h2.widget-title {
 /* Site info */
 
 .site-info {
-	background-color: #222;
+	background-color: #0F5110;
 	color: #fff;
 	letter-spacing: 0.05em;
 	text-align: center;
@@ -2396,11 +2396,11 @@ object {
 	}
 
 	.has-sidebar #primary {
-		float: left;
+		float: right;
 	}
 
 	.has-sidebar #secondary {
-		float: right;
+		float: left;
 		width: 30%;
 	}
 
@@ -2682,7 +2682,7 @@ object {
 	}
 
 	.has-top-content .main-navigation ul.nav-menu {
-		text-align: left;
+		text-align: center;
 	}
 
 	.main-navigation li {
@@ -2713,7 +2713,7 @@ object {
 	.main-navigation li:focus,
 	.main-navigation a:hover,
 	.main-navigation a:focus {
-		background: #151515;
+		background: #072607;
 	}
 
 	.main-navigation ul ul {
@@ -2755,7 +2755,7 @@ object {
 	.main-navigation ul ul ul ul ul ul ul ul ul ul ul a:focus,
 	.main-navigation ul ul ul ul ul ul ul ul ul ul ul li:hover,
 	.main-navigation ul ul ul ul ul ul ul ul ul ul ul li:focus {
-		background: #151515;
+		background: #072607;
 	}
 
 	.main-navigation ul ul ul,
@@ -2789,7 +2789,7 @@ object {
 	.main-navigation ul li.current_page_item > a,
 	.main-navigation ul li.current-menu-item > a,
 	.main-navigation ul li.current_page_ancestor > a {
-		background: #151515;
+		background: #072607;
 	}
 
 	.main-navigation ul ul li:hover > ul,
