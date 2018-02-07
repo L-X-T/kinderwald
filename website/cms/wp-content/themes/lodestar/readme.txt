@@ -113,6 +113,12 @@ Custom color, pattern, or a beautiful image – the choice is yours. To change t
 
 == Changelog ==
 
+= 31 January 2018 =
+* Add copyright information. Bump version number.
+
+= 29 January 2018 =
+* Manually list the logo's height and width, rather than using add_image_size -- the latter doesn't
+
 = 25 January 2018 =
 * Replace support for Jetpack's Site Logo for Core's Custom Logo. Make sure the output uses the same CSS classes for existing sites, and that the logo is sized correctly.
 

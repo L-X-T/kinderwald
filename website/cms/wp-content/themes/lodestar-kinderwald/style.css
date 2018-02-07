@@ -1,0 +1,156 @@
+/*
+Theme Name: Kinderwald
+Theme URI: https://www.derkinderwald.at/
+Description: Lodestar is a trendy one-page theme designed with startups and small business ventures in mind.
+Template: lodestar
+Version: 1.0.0
+Author: Alexander Thalhammer
+Author URI: https://www.wordpress.com
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: lodestar-kinderwald
+Tags: featured-image-header, featured-images, flexible-header, rtl-language-support, theme-options, threaded-comments, translation-ready, one-column, two-columns, right-sidebar
+*/
+
+/*@import url('../lodestar/style.css');*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Accessibility
+# Alignments
+# Clearings
+# Typography
+# Forms
+# Buttons
+# Formatting
+# Lists
+# Tables
+# Navigation
+# Links
+# Layout
+	## Posts
+	## Pages
+# Comments
+# Widgets
+# Infinite scroll
+# Media
+	## Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	font-family: "Alef", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Annie Use Your Telescope", cursive;
+}
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.site-header {
+	background-color: #0F5110;
+}
+
+/* Header top */
+.header-top {
+	background-color: #0F5110;
+}
+
+/*--------------------------------------------------------------
+# Main Navigation
+--------------------------------------------------------------*/
+
+.main-navigation ul {
+	background: inherit;
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Site info
+--------------------------------------------------------------*/
+
+.site-info {
+	background-color: #0F5110;
+}
+
+.site-info ul#footer-menu {
+	margin: 0 0 0 0;
+}
+
+.site-info #footer-menu li {
+	display: inline;
+	padding: 1em;
+	list-style-type: none;
+}
+
+/*--------------------------------------------------------------
+## Media Queries
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 60em) {
+	.has-sidebar #primary {
+		float: right;
+	}
+
+	.has-sidebar #secondary {
+		float: left;
+		width: 30%;
+	}
+
+	.has-top-content .main-navigation ul.nav-menu {
+		text-align: center;
+	}
+
+	.main-navigation li:hover,
+	.main-navigation li:focus,
+	.main-navigation a:hover,
+	.main-navigation a:focus {
+		background: #072607;
+	}
+
+	.main-navigation ul ul,
+	.main-navigation ul ul ul ul,
+	.main-navigation ul ul ul ul ul ul,
+	.main-navigation ul ul ul ul ul ul ul ul,
+	.main-navigation ul ul ul ul ul ul ul ul ul ul,
+	.main-navigation ul ul ul a:hover,
+	.main-navigation ul ul ul a:focus,
+	.main-navigation ul ul ul li:hover,
+	.main-navigation ul ul ul li:focus,
+	.main-navigation ul ul ul ul ul a:hover,
+	.main-navigation ul ul ul ul ul a:focus,
+	.main-navigation ul ul ul ul ul li:hover,
+	.main-navigation ul ul ul ul ul li:focus,
+	.main-navigation ul ul ul ul ul ul ul a:hover,
+	.main-navigation ul ul ul ul ul ul ul a:focus,
+	.main-navigation ul ul ul ul ul ul ul li:hover,
+	.main-navigation ul ul ul ul ul ul ul li:focus,
+	.main-navigation ul ul ul ul ul ul ul ul ul a:hover,
+	.main-navigation ul ul ul ul ul ul ul ul ul a:focus,
+	.main-navigation ul ul ul ul ul ul ul ul ul li:hover,
+	.main-navigation ul ul ul ul ul ul ul ul ul li:focus,
+	.main-navigation ul ul ul ul ul ul ul ul ul ul ul a:hover,
+	.main-navigation ul ul ul ul ul ul ul ul ul ul ul a:focus,
+	.main-navigation ul ul ul ul ul ul ul ul ul ul ul li:hover,
+	.main-navigation ul ul ul ul ul ul ul ul ul ul ul li:focus {
+		background: #072607;
+	}
+
+	.main-navigation ul li.current_page_item > a,
+	.main-navigation ul li.current-menu-item > a,
+	.main-navigation ul li.current_page_ancestor > a {
+		background: #072607;
+	}
+}

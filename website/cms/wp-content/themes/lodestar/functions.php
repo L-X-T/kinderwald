@@ -82,7 +82,8 @@ function lodestar_setup() {
 
 	// Add theme support for Custom Logo.
 	add_theme_support( 'custom-logo', array(
-		'size'        => 'lodestar-logo',
+		'width'       => 2400,
+		'height'      => 400,
 		'flex-width'  => true,
 		'flex-height' => true,
 		'header-text' => array( 'site-title', 'site-description' ),
@@ -304,8 +305,6 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 
-
-/**
- * Load plugin enhancement file to display admin notices.
- */
-require get_template_directory() . '/inc/plugin-enhancements.php';
+// updater for WordPress.com themes
+if ( is_admin() )
+	include dirname( __FILE__ ) . '/inc/updater.php';

@@ -8,19 +8,6 @@ Author URI: https://www.wordpress.com
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: lodestar
-Tags: featured-image-header, featured-images, flexible-header, rtl-language-support, theme-options, threaded-comments, translation-ready, one-column, two-columns, right-sidebar
-
-Lodestar WordPress Theme, Copyright 2016 Automattic, Inc.
-Lodestar is distributed under the terms of the GNU GPL.
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-Lodestar is created by the theme generator at http://components.underscores.me/, (C) 2015-2016 Automattic, Inc.
-Components is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 /*--------------------------------------------------------------
@@ -390,7 +377,7 @@ input,
 select,
 textarea {
 	color: #333;
-	font-family: "Alef", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: "Karla", "Helvetica Neue", helvetica, arial, sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -398,7 +385,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-family: "Annie Use Your Telescope", cursive;
+	font-family: "Work Sans", "Helvetica Neue", helvetica, arial, sans-serif;
 	font-weight: 800;
 	letter-spacing: 0.1em;
 	line-height: 1.25;
@@ -875,12 +862,12 @@ body {
 }
 
 .site-header {
-	background-color: #0F5110;
+	background-color: #333;
 }
 
 /* Header top */
 .header-top {
-	background-color: #0F5110;
+	background-color: #29292a;
 	color: #fff;
 	letter-spacing: 0.05em;
 	text-align: center;
@@ -999,12 +986,12 @@ body:not(.no-header-image) .custom-header-image::before,
 }
 
 .main-navigation ul {
-	background: inherit;
+	background: #111;
 	display: none;
 	list-style: none;
 	margin: 0;
 	padding: 0 1.5em;
-	text-align: center;
+	text-align: left;
 }
 
 .main-navigation ul.nav-menu {
@@ -1953,7 +1940,7 @@ h2.widget-title {
 /* Site info */
 
 .site-info {
-	background-color: #0F5110;
+	background-color: #222;
 	color: #fff;
 	letter-spacing: 0.05em;
 	text-align: center;
@@ -1971,27 +1958,17 @@ h2.widget-title {
 	text-decoration: none;
 }
 
-/* .site-info .wrap .sep {
+.site-info .wrap .sep {
 	margin: 0;
 	display: block;
 	visibility: hidden;
 	height: 0;
 	width: 100%;
-} */
-
-.site-info ul#footer-menu {
-	margin: 0 0 0 0;
 }
 
-.site-info #footer-menu li {
-	display: inline;
-	padding: 1em;
-	list-style-type: none;
-}
-
-	/*--------------------------------------------------------------
-    # Infinite scroll
-    --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
 #infinite-handle {
 	clear: both;
 	padding: 0 0 4em;
@@ -2406,11 +2383,11 @@ object {
 	}
 
 	.has-sidebar #primary {
-		float: right;
+		float: left;
 	}
 
 	.has-sidebar #secondary {
-		float: left;
+		float: right;
 		width: 30%;
 	}
 
@@ -2692,7 +2669,7 @@ object {
 	}
 
 	.has-top-content .main-navigation ul.nav-menu {
-		text-align: center;
+		text-align: left;
 	}
 
 	.main-navigation li {
@@ -2723,7 +2700,7 @@ object {
 	.main-navigation li:focus,
 	.main-navigation a:hover,
 	.main-navigation a:focus {
-		background: #072607;
+		background: #151515;
 	}
 
 	.main-navigation ul ul {
@@ -2765,7 +2742,7 @@ object {
 	.main-navigation ul ul ul ul ul ul ul ul ul ul ul a:focus,
 	.main-navigation ul ul ul ul ul ul ul ul ul ul ul li:hover,
 	.main-navigation ul ul ul ul ul ul ul ul ul ul ul li:focus {
-		background: #072607;
+		background: #151515;
 	}
 
 	.main-navigation ul ul ul,
@@ -2799,7 +2776,7 @@ object {
 	.main-navigation ul li.current_page_item > a,
 	.main-navigation ul li.current-menu-item > a,
 	.main-navigation ul li.current_page_ancestor > a {
-		background: #072607;
+		background: #151515;
 	}
 
 	.main-navigation ul ul li:hover > ul,
