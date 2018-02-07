@@ -20,7 +20,23 @@
 
 /** Local vs Production */
 /** Local vs Production */
-if (strpos($_SERVER['HTTP_HOST'], 'kinderwald.local') !== false) {
+if (strpos($_SERVER['HTTP_HOST'], 'kinderwald.local:8888') !== false) {
+    define('WP_HOME', 'http://kinderwald.local:8888'); //local, e.g. 'http://PROJECT_NAME.local:8888'
+    define('WP_SITEURL', WP_HOME . '/cms'); //subdir example: '/cms'
+
+    //define('WP_ALTERNATE_UPLOAD_URL', 'https://ortnerelectric.com/wp-content/uploads'); //local, e.g. 'http://PROJECT_NAME.dev.engarde-agency.com/cms/wp-content/uploads'
+
+    define('WP_DEBUG', true);
+
+    // ** MySQL settings - You can get this info from your web host ** //
+    define('DB_NAME', 'kinderwald');
+    define('DB_USER', 'root');
+    define('DB_PASSWORD', 'root');
+    define('DB_HOST', 'localhost');
+    define('DB_CHARSET', 'utf8mb4');
+    define('DB_COLLATE', '');
+}
+else if (strpos($_SERVER['HTTP_HOST'], 'kinderwald.local') !== false) {
     define('WP_HOME', 'http://kinderwald.local'); //local, e.g. 'http://PROJECT_NAME.local:8888'
     define('WP_SITEURL', WP_HOME . '/cms'); //subdir example: '/cms'
 
