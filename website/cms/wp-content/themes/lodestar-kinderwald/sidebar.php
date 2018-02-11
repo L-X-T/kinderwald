@@ -12,5 +12,5 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <aside id="secondary" class="widget-area" role="complementary">
-	<?php //dynamic_sidebar( 'sidebar-1' ); ?>
+	<a class="kw_logo_cnt" href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_klein.png"></a>
 </aside><!-- #secondary -->

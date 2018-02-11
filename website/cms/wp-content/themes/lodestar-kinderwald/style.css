@@ -50,7 +50,7 @@ textarea {
 	font-family: "Alef", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .main-navigation, .site-title, .site-info {
 	font-family: "Annie Use Your Telescope", cursive;
 }
 
@@ -60,12 +60,18 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 
 .site-header {
-	background-color: #0F5110;
+	background-color: #78C265;
 }
 
 /* Header top */
 .header-top {
-	background-color: #0F5110;
+	background-color: #78C265;
+}
+
+.site-header-fixed.header-top .wrap,
+.site-header-hidden.header-top .wrap {
+	 padding-bottom: 1.25em;
+	 padding-top: 1.25em;
 }
 
 /*--------------------------------------------------------------
@@ -77,12 +83,42 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 }
 
+@media screen and (min-width: 60em) {
+	.main-navigation ul {
+		font-size: 20px;
+	}
+}
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+
+aside.widget-area {
+	display: none;
+}
+
+@media screen and (min-width: 60em) {
+	aside.widget-area {
+		display: block;
+		position: relative;
+	}
+
+	.kw_logo_cnt {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+
+
 /*--------------------------------------------------------------
 # Site info
 --------------------------------------------------------------*/
 
 .site-info {
-	background-color: #0F5110;
+	background-color: #B98473;
 }
 
 .site-info ul#footer-menu {
@@ -93,6 +129,12 @@ h1, h2, h3, h4, h5, h6 {
 	display: inline;
 	padding: 1em;
 	list-style-type: none;
+}
+
+@media screen and (min-width: 60em) {
+	.site-info ul {
+		font-size: 20px;
+	}
 }
 
 /*--------------------------------------------------------------

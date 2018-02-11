@@ -1,3 +1,7 @@
+var animationTimeout = 3000;
+var animationDuration = 3000;
+var cookieExpiresDays = 30;
+
 jQuery(document).ready(function() {
     if (!jQuery.cookie('intro_was_shown')) {
         jQuery('.kw_intro_container').show();
@@ -11,18 +15,22 @@ jQuery(document).ready(function() {
 
             jQuery('.kw_intro.left').animate(
                 { left: -width + 'px', right: '100%' },
-                { queue: false, duration: 3000 },
+                { queue: false, duration: animationDuration },
                 { easing: 'easeInOutQuad' }
             );
 
             jQuery('.kw_intro.right').animate(
                 { right: -width + 'px', left: '100%' },
-                { queue: false, duration: 3000 },
+                { queue: false, duration: animationDuration },
                 { easing: 'easeInOutQuad' }
             );
 
-        }, 3000);
+            setTimeout(function() {
+                jQuery('.kw_intro_container').hide();
+            }, animationDuration);
 
-        jQuery.cookie('intro_was_shown', 1, { expires: 30, path: '/' })
+        }, animationTimeout);
+
+        jQuery.cookie('intro_was_shown', 1, { expires: cookieExpiresDays, path: '/' })
     }
 });

@@ -16,7 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link href="https://fonts.googleapis.com/css?family=Alef:400,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alef" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope" rel="stylesheet">
 <?php wp_head(); ?>
 </head>
@@ -41,11 +41,6 @@
 			<div class="wrap">
 				<?php get_template_part( 'components/navigation/navigation', 'top' ); ?>
 				<?php get_template_part( 'components/header/content', 'top' ); ?>
-				<?php // Add Woocommerce Cart to header if Woocommerce exists
-					if ( class_exists( 'WooCommerce' ) ) {
-						lodestar_woocommerce_header_cart();
-					}
-				?>
 			</div>
 		</div><!-- .header-top -->
 
