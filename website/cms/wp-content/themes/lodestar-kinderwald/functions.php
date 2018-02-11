@@ -23,14 +23,15 @@ add_action( 'wp_enqueue_scripts', 'kinderwald_enqueue_styles' );
 
 function kinderwald_enqueue_scripts() {
 
-    wp_enqueue_script('logo',
-        get_stylesheet_directory_uri() . '/assets/scripts/logo.js',
-        array( 'jquery' ),
-        wp_get_theme()->get('Version'),
-        true
-    );
-
-    // add intro for front page
+    if (!is_front_page()) {
+        wp_enqueue_script('logo',
+            get_stylesheet_directory_uri() . '/assets/scripts/logo.js',
+            array( 'jquery' ),
+            wp_get_theme()->get('Version'),
+            true
+        );
+    }
+     // add intro for front page
     if (is_front_page() && empty($_COOKIE['intro_was_shown'])) {
         wp_enqueue_script('jcookie',
             '//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js',
