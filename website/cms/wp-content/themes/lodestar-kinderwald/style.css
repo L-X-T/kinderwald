@@ -54,6 +54,22 @@ h1, h2, h3, h4, h5, h6, .main-navigation, .site-title, .site-info {
 	font-family: "Annie Use Your Telescope", cursive;
 }
 
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+a {
+	color: #78C265;
+}
+
+a:visited {
+	color: #32801D;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #F7D545;
+}
 
 /*--------------------------------------------------------------
 # Header
@@ -98,6 +114,10 @@ aside.widget-area {
 }
 
 @media screen and (min-width: 60em) {
+	#primary.content-area {
+		min-height: 480px;
+	}
+
 	aside.widget-area {
 		display: block;
 		position: relative;
@@ -131,6 +151,15 @@ aside.widget-area {
 	list-style-type: none;
 }
 
+.site-info #footer-menu li a {
+	color: white;
+}
+
+.site-info #footer-menu li.current-menu-item  a {
+	border-bottom: 2px solid;
+}
+
+
 @media screen and (min-width: 60em) {
 	.site-info ul {
 		font-size: 20px;
@@ -154,45 +183,13 @@ aside.widget-area {
 	.has-top-content .main-navigation ul.nav-menu {
 		text-align: center;
 	}
+}
 
-	.main-navigation li:hover,
-	.main-navigation li:focus,
-	.main-navigation a:hover,
-	.main-navigation a:focus {
-		background: #072607;
-	}
-
-	.main-navigation ul ul,
-	.main-navigation ul ul ul ul,
-	.main-navigation ul ul ul ul ul ul,
-	.main-navigation ul ul ul ul ul ul ul ul,
-	.main-navigation ul ul ul ul ul ul ul ul ul ul,
-	.main-navigation ul ul ul a:hover,
-	.main-navigation ul ul ul a:focus,
-	.main-navigation ul ul ul li:hover,
-	.main-navigation ul ul ul li:focus,
-	.main-navigation ul ul ul ul ul a:hover,
-	.main-navigation ul ul ul ul ul a:focus,
-	.main-navigation ul ul ul ul ul li:hover,
-	.main-navigation ul ul ul ul ul li:focus,
-	.main-navigation ul ul ul ul ul ul ul a:hover,
-	.main-navigation ul ul ul ul ul ul ul a:focus,
-	.main-navigation ul ul ul ul ul ul ul li:hover,
-	.main-navigation ul ul ul ul ul ul ul li:focus,
-	.main-navigation ul ul ul ul ul ul ul ul ul a:hover,
-	.main-navigation ul ul ul ul ul ul ul ul ul a:focus,
-	.main-navigation ul ul ul ul ul ul ul ul ul li:hover,
-	.main-navigation ul ul ul ul ul ul ul ul ul li:focus,
-	.main-navigation ul ul ul ul ul ul ul ul ul ul ul a:hover,
-	.main-navigation ul ul ul ul ul ul ul ul ul ul ul a:focus,
-	.main-navigation ul ul ul ul ul ul ul ul ul ul ul li:hover,
-	.main-navigation ul ul ul ul ul ul ul ul ul ul ul li:focus {
-		background: #072607;
-	}
-
-	.main-navigation ul li.current_page_item > a,
-	.main-navigation ul li.current-menu-item > a,
-	.main-navigation ul li.current_page_ancestor > a {
-		background: #072607;
+@media screen and (max-width: 30em) {
+	.entry-content img {
+		float: none !important;
+		display: block;
+		margin-bottom: 1em;
 	}
 }
+
