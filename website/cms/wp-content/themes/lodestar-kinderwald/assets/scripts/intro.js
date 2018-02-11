@@ -1,6 +1,6 @@
 var animationTimeout = 3000;
 var animationDuration = 3000;
-var cookieExpiresDays = 30;
+var cookieExpiresDays = 1; // just 1 :-)
 
 jQuery(document).ready(function() {
     if (!jQuery.cookie('intro_was_shown')) {
