@@ -50,8 +50,12 @@ textarea {
 	font-family: "Alef", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, .main-navigation, .site-title, .site-info {
+h1, h2, h3, h4, h5, h6, blockquote, .main-navigation, .site-title, .site-info {
 	font-family: "Annie Use Your Telescope", cursive;
+}
+
+blockquote {
+	border-left: none;
 }
 
 /*--------------------------------------------------------------
@@ -108,6 +112,10 @@ a:active {
 		font-size: 20px;
 	}
 
+	.main-navigation li, .main-navigation a {
+		transition: background-color 0.2s;
+	}
+
 	.main-navigation li:hover, .main-navigation li:focus, .main-navigation a:hover, .main-navigation a:focus {
 		background: #F7D545;
 	}
@@ -144,78 +152,15 @@ aside.widget-area {
 }
 
 
-
 /*--------------------------------------------------------------
-# Site info
---------------------------------------------------------------*/
-
-.site-info {
-	background-color: #B98473;
-}
-
-.site-info ul#footer-menu {
-	margin: 0 0 0 0;
-}
-
-.site-info #footer-menu li {
-	display: inline;
-	padding: 1em;
-	list-style-type: none;
-}
-
-.site-info #footer-menu li a {
-	color: white;
-}
-
-.site-info #footer-menu li a:hover {
-	color: #F7D545;
-}
-
-.site-info #footer-menu li.current-menu-item a,
-.site-info #footer-menu li.current-page-ancestor a {
-	border-bottom: 2px solid;
-	color: #F7D545;
-}
-
-
-@media screen and (min-width: 60em) {
-	.site-info ul {
-		font-size: 20px;
-	}
-}
-
-/*--------------------------------------------------------------
-## Media Queries
+## Content / Gallery
 --------------------------------------------------------------*/
 
 @media screen and (min-width: 60em) {
-	.has-sidebar #primary {
-		float: right;
+	.site-content {
+		padding-bottom: 1em;
 	}
 
-	.has-sidebar #secondary {
-		float: left;
-		width: 30%;
-	}
-
-	.has-top-content .main-navigation ul.nav-menu {
-		text-align: center;
-	}
-}
-
-@media screen and (max-width: 30em) {
-	.entry-content img {
-		float: none !important;
-		display: block;
-		margin-bottom: 1em;
-	}
-}
-
-/*--------------------------------------------------------------
-## Gallery
---------------------------------------------------------------*/
-
-@media screen and (min-width: 60em) {
 	.page-template-page-gallery .site-content {
 		padding-top: 8em;
 	}
@@ -294,5 +239,71 @@ ul#gallery li.current-menu-item  a {
 	.gallery-columns-4 .gallery-item,
 	.gallery-columns-5 .gallery-item {
 		max-width: 50%;
+	}
+}
+
+/*--------------------------------------------------------------
+# Site info
+--------------------------------------------------------------*/
+
+.site-info {
+	background-color: #B98473;
+}
+
+.site-info ul#footer-menu {
+	margin: 0 0 0 0;
+}
+
+.site-info #footer-menu li {
+	display: inline;
+	padding: 1em;
+	list-style-type: none;
+}
+
+.site-info #footer-menu li a {
+	color: white;
+}
+
+.site-info #footer-menu li a:hover {
+	color: #F7D545;
+}
+
+.site-info #footer-menu li.current-menu-item a,
+.site-info #footer-menu li.current-page-ancestor a {
+	border-bottom: 2px solid;
+	color: #F7D545;
+}
+
+
+@media screen and (min-width: 60em) {
+	.site-info ul {
+		font-size: 20px;
+	}
+}
+
+/*--------------------------------------------------------------
+## Media Queries
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 60em) {
+	.has-sidebar #primary {
+		float: right;
+	}
+
+	.has-sidebar #secondary {
+		float: left;
+		width: 30%;
+	}
+
+	.has-top-content .main-navigation ul.nav-menu {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 30em) {
+	.entry-content img {
+		float: none !important;
+		display: block;
+		margin-bottom: 1em;
 	}
 }

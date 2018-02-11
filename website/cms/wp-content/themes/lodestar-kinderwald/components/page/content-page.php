@@ -20,8 +20,6 @@
 				'link_before' => '<span>',
 				'link_after'  => '</span>'
 			) );
-
-            lodestar_edit_link( get_the_ID() )
 		?>
 	</div>
 </article><!-- #post-## -->
