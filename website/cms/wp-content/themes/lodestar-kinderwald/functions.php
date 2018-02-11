@@ -48,6 +48,10 @@ function kinderwald_enqueue_scripts() {
         );
     }
 }
-
 add_action( 'wp_enqueue_scripts', 'kinderwald_enqueue_scripts', 100 );
+
+function register_gallery_menu() {
+    register_nav_menu('gallery', 'Gallery' );
+}
+add_action( 'init', 'register_gallery_menu' );
 ?>

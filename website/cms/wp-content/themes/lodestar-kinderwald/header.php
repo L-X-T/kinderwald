@@ -44,7 +44,7 @@
 			</div>
 		</div><!-- .header-top -->
 
-		<?php if (!is_front_page()) get_template_part( 'components/header/header', 'image' ); ?>
+		<?php get_template_part( 'components/header/header', 'image' ); ?>
 
 	</header>
 
