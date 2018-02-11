@@ -4,11 +4,11 @@ function kinderwald_enqueue_styles() {
     $parent_style = 'lodestar';
 
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'kinderwald',
+    /*wp_enqueue_style( 'kinderwald',
         get_stylesheet_directory_uri() . '/style.css',
         array( $parent_style ),
         wp_get_theme()->get('Version')
-    );
+    );*/
 
     // add intro for front page
     if (is_front_page()) {

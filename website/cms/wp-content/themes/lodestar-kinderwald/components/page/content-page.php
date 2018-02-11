@@ -20,9 +20,8 @@
 				'link_before' => '<span>',
 				'link_after'  => '</span>'
 			) );
+
+            lodestar_edit_link( get_the_ID() )
 		?>
 	</div>
-	<footer class="entry-footer">
-		<?php lodestar_edit_link( get_the_ID() ); ?>
-	</footer>
 </article><!-- #post-## -->
