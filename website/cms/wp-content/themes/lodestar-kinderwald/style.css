@@ -103,14 +103,17 @@ a:active {
 	text-align: center;
 }
 
-.main-navigation ul li.current-page-ancestor {
-
-	background: #151515;
-}
-
 @media screen and (min-width: 60em) {
 	.main-navigation ul {
 		font-size: 20px;
+	}
+
+	.main-navigation li:hover, .main-navigation li:focus, .main-navigation a:hover, .main-navigation a:focus {
+		background: #F7D545;
+	}
+
+	.main-navigation ul li.current_page_item > a, .main-navigation ul li.current-menu-item > a, .main-navigation ul li.current_page_ancestor > a, .main-navigation ul li.current-page-ancestor > a {
+		background: #F7D545;
 	}
 }
 
@@ -164,9 +167,14 @@ aside.widget-area {
 	color: white;
 }
 
+.site-info #footer-menu li a:hover {
+	color: #F7D545;
+}
+
 .site-info #footer-menu li.current-menu-item a,
 .site-info #footer-menu li.current-page-ancestor a {
 	border-bottom: 2px solid;
+	color: #F7D545;
 }
 
 
