@@ -1,4 +1,10 @@
 <?php
+
+// let editors edit the menu
+$role = get_role( 'editor' );
+$role->add_cap( 'edit_theme_options' );
+
+
 function kinderwald_enqueue_styles() {
 
     $parent_style = 'lodestar';
