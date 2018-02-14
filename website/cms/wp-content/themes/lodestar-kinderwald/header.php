@@ -12,12 +12,12 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link href="https://fonts.googleapis.com/css?family=Alef" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope" rel="stylesheet">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <link href="https://fonts.googleapis.com/css?family=Alef" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope" rel="stylesheet">
 <?php wp_head(); ?>
 </head>
 
@@ -25,7 +25,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lodestar' ); ?></a>
 
-    <?php if (is_front_page() && empty($_COOKIE['intro_was_shown'])) : ?>
+    <?php //if (is_front_page() && empty($_COOKIE['intro_was_shown'])) : ?>
+    <?php if (is_front_page()) : ?>
     <div class="kw_intro_container">
         <div class="kw_intro left">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/waldsonne-links.jpg">
