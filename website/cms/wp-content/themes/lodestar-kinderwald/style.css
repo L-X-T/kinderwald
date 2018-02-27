@@ -224,9 +224,18 @@ ul#gallery li.current-menu-item  a {
 
 .page-template-page-gallery .entry-content p a {
 	display: inline-block;
-	margin: 0.5em;
+	margin: 0.5em 0.5em;
 }
 
+@media screen and (max-width: 30em) {
+	.page-template-page-gallery .entry-content p a {
+		margin: 0.25em 0.5em;
+	}
+
+	.page-template-page-gallery .entry-content img {
+		margin-bottom: 0;
+	}
+}
 
 @media screen and (max-width: 40em) {
 	.gallery-columns-4 .gallery-item,
@@ -248,6 +257,9 @@ ul#gallery li.current-menu-item  a {
 
 .site-info {
 	background-color: #B98473;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
 }
 
 .site-info ul#footer-menu {
