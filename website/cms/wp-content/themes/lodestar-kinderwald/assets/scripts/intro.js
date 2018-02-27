@@ -3,7 +3,7 @@ var animationDuration = 3000;
 var cookieExpiresDays = 1; // just 1 :-)
 
 jQuery(document).ready(function() {
-    if (!jQuery.cookie('intro_was_shown')) {
+    //if (!jQuery.cookie('intro_was_shown')) {
         jQuery('.kw_intro_container').show();
 
         setTimeout(function() {
@@ -31,6 +31,6 @@ jQuery(document).ready(function() {
 
         }, animationTimeout);
 
-        jQuery.cookie('intro_was_shown', 1, { expires: cookieExpiresDays, path: '/' })
-    }
+        //jQuery.cookie('intro_was_shown', 1, { expires: cookieExpiresDays, path: '/' })
+    //}
 });

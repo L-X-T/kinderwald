@@ -4,6 +4,9 @@
 $role = get_role( 'editor' );
 $role->add_cap( 'edit_theme_options' );
 
+acf_add_options_page( array(
+    'page_title' => 'Optionen',
+) );
 
 function kinderwald_enqueue_styles() {
 

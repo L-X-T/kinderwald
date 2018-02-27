@@ -54,6 +54,10 @@ h1, h2, h3, h4, h5, h6, blockquote, .main-navigation, .site-title, .site-info {
 	font-family: "Annie Use Your Telescope", cursive;
 }
 
+.entry-content h1, .entry-content h2 {
+	color: inherit;
+}
+
 blockquote {
 	border-left: none;
 }
@@ -63,6 +67,7 @@ blockquote {
 --------------------------------------------------------------*/
 a {
 	color: #78C265;
+	transition: color 0.2s;
 }
 
 a:visited {
@@ -260,9 +265,25 @@ ul#gallery li.current-menu-item  a {
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
+	padding: 0.75em 0;
 }
 
-.site-info ul#footer-menu {
+.site-info p {
+	margin-bottom: 0;
+}
+
+.site-info a,
+.site-info a:visited {
+	color: white;
+}
+
+.site-info a:hover,
+.site-info a:focus,
+.site-info a:active {
+	color: #F7D545;
+}
+
+/*.site-info ul#footer-menu {
 	margin: 0 0 0 0;
 }
 
@@ -291,7 +312,7 @@ ul#gallery li.current-menu-item  a {
 	.site-info ul {
 		font-size: 20px;
 	}
-}
+}*/
 
 /*--------------------------------------------------------------
 ## Media Queries

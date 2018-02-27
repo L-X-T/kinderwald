@@ -32,7 +32,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lodestar' ); ?></a>
 
-    <?php if (is_front_page() && empty($_COOKIE['intro_was_shown'])) : ?>
+    <?php //if (is_front_page() && empty($_COOKIE['intro_was_shown'])) : ?>
+    <?php if (is_front_page()) : ?>
     <div class="kw_intro_container">
         <div class="kw_intro left">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/waldsonne-links.jpg">
