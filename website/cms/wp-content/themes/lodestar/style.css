@@ -2,12 +2,25 @@
 Theme Name: Lodestar
 Theme URI: https://wordpress.com/themes/lodestar/
 Description: Lodestar is a trendy one-page theme designed with startups and small business ventures in mind.
-Version: 1.0.6
+Version: 1.0.8
 Author: Automattic
 Author URI: https://www.wordpress.com
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: lodestar
+Tags: featured-image-header, featured-images, flexible-header, rtl-language-support, theme-options, threaded-comments, translation-ready, one-column, two-columns, right-sidebar
+
+Lodestar WordPress Theme, Copyright 2016 Automattic, Inc.
+Lodestar is distributed under the terms of the GNU GPL.
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Lodestar is created by the theme generator at http://components.underscores.me/, (C) 2015-2016 Automattic, Inc.
+Components is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 /*--------------------------------------------------------------
@@ -2056,10 +2069,8 @@ h2.widget-title {
 # Media
 --------------------------------------------------------------*/
 img {
-	height: auto;
-	/* Make sure images are scaled correctly. */
-	max-width: 100%;
-	/* Adhere to container width. */
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
 }
 
 .page-content .wp-smiley,

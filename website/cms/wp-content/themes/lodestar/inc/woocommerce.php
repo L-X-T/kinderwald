@@ -15,7 +15,10 @@
  * @return void
  */
 function lodestar_woocommerce_setup() {
-	add_theme_support( 'woocommerce' );
+	add_theme_support( 'woocommerce', array(
+		'thumbnail_image_width' => 830,
+		'single_image_width'    => 894,
+	) );
 	add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );

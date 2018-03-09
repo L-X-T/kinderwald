@@ -395,6 +395,10 @@ ul.products li.product .added_to_cart {
 	position: relative;
 }
 
+.single-product div.product .woocommerce-product-gallery img {
+	display: block;
+}
+
 .single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
 	position: absolute;
 	right: 0;
