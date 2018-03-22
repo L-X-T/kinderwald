@@ -113,6 +113,22 @@ Custom color, pattern, or a beautiful image – the choice is yours. To change t
 
 == Changelog ==
 
+= 3 March 2018 =
+* Use wp_kses_post rather than wp_filter_post_kses.
+* Use wp_kses_post rather than wp_filter_post_kses.
+
+= 23 February 2018 =
+* Fix the issue with product gallery images becoming taller on hover
+
+= 22 February 2018 =
+* Revert the fix for the issue with product gallery images becoming taller on hover
+* Fix the issue with product gallery image becoming taller on hover
+* Fix the incorrect WooCommerce image sizes
+* Update lazy load placeholder image to match the aspect ratio of the images, rather than a square. This helps prevent gaps in the layout on mobile.
+
+= 21 February 2018 =
+* Define WooCommerce image sizes
+
 = 31 January 2018 =
 * Add copyright information. Bump version number.
 
