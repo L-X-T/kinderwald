@@ -1,4 +1,7 @@
 <?php
+/** Enable W3 Total Cache */
+define('WP_CACHE', true); // Added by W3 Total Cache
+
 /**
  * The base configuration for WordPress
  *
@@ -57,8 +60,7 @@ else {
     define('WP_HOME', 'https://www.derkinderwald.at'); //local, e.g. 'http://PROJECT_NAME.local:8888'
     define('WP_SITEURL', WP_HOME . '/cms'); //subdir example: '/cms'
 
-    define('WP_DEBUG', true);
-    //define('WP_DEBUG', false);
+    define('WP_DEBUG', false);
 
     // ** MySQL settings - You can get this info from your web host ** //
     define('DB_NAME', 'd0294ce4');
