@@ -1,7 +1,4 @@
 <?php
-/** Enable W3 Total Cache */
-define('WP_CACHE', true); // Added by W3 Total Cache
-
 /**
  * The base configuration for WordPress
  *
@@ -37,8 +34,7 @@ if (strpos($_SERVER['HTTP_HOST'], 'kinderwald.local:8888') !== false) {
     define('DB_HOST', 'localhost');
     define('DB_CHARSET', 'utf8mb4');
     define('DB_COLLATE', '');
-}
-else if (strpos($_SERVER['HTTP_HOST'], 'kinderwald.local') !== false) {
+} else if (strpos($_SERVER['HTTP_HOST'], 'kinderwald.local') !== false) {
     define('WP_HOME', 'http://kinderwald.local'); //local, e.g. 'http://PROJECT_NAME.local:8888'
     define('WP_SITEURL', WP_HOME . '/cms'); //subdir example: '/cms'
 
@@ -53,9 +49,9 @@ else if (strpos($_SERVER['HTTP_HOST'], 'kinderwald.local') !== false) {
     define('DB_HOST', 'localhost');
     define('DB_CHARSET', 'utf8mb4');
     define('DB_COLLATE', '');
-}
-else {
+} else {
     define('FORCE_SSL_ADMIN', true);
+	define('WP_CACHE', true);
 
     define('WP_HOME', 'https://www.derkinderwald.at'); //local, e.g. 'http://PROJECT_NAME.local:8888'
     define('WP_SITEURL', WP_HOME . '/cms'); //subdir example: '/cms'
