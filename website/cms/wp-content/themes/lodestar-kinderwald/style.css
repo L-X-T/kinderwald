@@ -309,14 +309,14 @@ ul#gallery li.current-menu-item  a {
 .site-info #footer-menu li.current-page-ancestor a {
 	border-bottom: 2px solid;
 	color: #F7D545;
-}
+}*/
 
 
-@media screen and (min-width: 60em) {
-	.site-info ul {
+@media screen and (min-width: 1024px) {
+	.site-info {
 		font-size: 20px;
 	}
-}*/
+}
 
 /*--------------------------------------------------------------
 ## Media Queries
